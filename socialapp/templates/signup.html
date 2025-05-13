@@ -1,0 +1,17 @@
+<html>
+  <body>
+    <form method="POST">
+      {% csrf_token %}
+      {% for f in form %}
+      <div>
+        <i></i>
+        <div>
+          <label>{{ f.label }}</label>
+          <br>
+          {{ f }}
+        </div>
+      </div>
+      {% endfor %}
+      <button type="submit">Register</button>          
+  </body>
+</html>
